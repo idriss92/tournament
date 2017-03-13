@@ -1,6 +1,6 @@
-var webpack = require('webpack');
-var webpackDevServer = require('webpack-dev-server');
-var config = require('../webpack.config');
+let webpack = require('webpack');
+let webpackDevServer = require('webpack-dev-server');
+let config = require('../webpack.config');
 
 // var express = require('express');
 // var app = express();
@@ -16,29 +16,10 @@ new webpackDevServer(webpack(config),{
     hot: true,
     historyApiFallback: true,
     headers:{ "Access-Control-Allow-Origin": "*", "Access-Control-Allow-Credentials": "true"}
-}).listen(8081,'localhost', function(err, result){
+}).listen(8080,'localhost', function(err, result){
     if(err){
         return console.log(err);
     }
 
     console.log("listening at http://localhost:8080/");
 });
-
-// app.listen(8080);
-
-// if (process.platform === "win32") {
-//   var rl = require("readline").createInterface({
-//     input: process.stdin,
-//     output: process.stdout
-//   });
-//  
-//   rl.on("SIGINT", function () {
-//     process.emit("SIGINT");
-//   });
-// }
-//  
-// process.on("SIGINT", function () {
-//   //graceful shutdown
-//   process.exit();
-//   rl.close();
-// });

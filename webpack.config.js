@@ -1,6 +1,6 @@
-var path = require('path');
-var webpack = require('webpack');
-var config = {
+let path = require('path');
+let webpack = require('webpack');
+let config = {
   /*
    * app.ts represents the entry point to your web application. Webpack will
    * recursively go through every "require" statement in app.ts and

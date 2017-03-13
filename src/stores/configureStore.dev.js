@@ -2,7 +2,7 @@ import { createStore, applyMiddleware, compose } from 'redux';
 import * as promise from 'redux-promise';
 import reducer from '../reducers/tournament.reducer';
 
-var webpack = require('webpack');
+let webpack = require('webpack');
 
 export default function configureStore(initialState) {
   const finalCreateStore = compose(
