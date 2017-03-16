@@ -12,10 +12,5 @@ export default (
     <IndexRoute component={TournamentsIndex} />
     <Route path="tournaments/new" component={TournamentsNew} />
     <Route path="tournaments/:id" component={TournamentsShow} />
-    {/*<Route path="/signin" component={SignIn} />
-    <Route path="/signup" component={SignUp} />
-    <Route path="/forgotPwd" component={ForgotPwd} />
-    <Route path="/validateEmail/:token" component={ValidateEmail} />
-    <Route path="/profile" component={Profile} />*/}
   </Route>
 );

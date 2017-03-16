@@ -1,5 +1,5 @@
 import { createStore, applyMiddleware, compose } from 'redux';
-import rootReducer from '../reducers/tournament.reducer';
+import rootReducer from '../reducers/index.ts';
 import * as ReduxPromise from 'redux-promise';
 
 // Middleware you want to use in production:

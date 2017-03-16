@@ -128,3 +128,32 @@ export function updateUserEmail(email) {
     payload:email
   };
 }
+
+export function validateUserFields(values) {
+  //note: we cant have /users/validateFields because it'll match /users/:id path!
+  const request = axios.post(`${ACTIONS.ROOT_URL}/users/validate/fields`, values);
+
+  return {
+    type: ACTIONS.VALIDATE_USER_FIELDS,
+    payload: request
+  };
+}
+
+export function validateUserFieldsSuccess() {
+  return {
+    type: ACTIONS.VALIDATE_USER_FIELDS_SUCCESS
+  };
+}
+
+export function validateUserFieldsFailure(error) {
+  return {
+    type: ACTIONS.VALIDATE_USER_FIELDS_FAILURE,
+    payload: error
+  };
+}
+
+export function resetValidateUserFields() {
+  return {
+    type: ACTIONS.RESET_VALIDATE_USER_FIELDS
+  }
+};

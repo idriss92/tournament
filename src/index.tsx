@@ -12,15 +12,14 @@ import { Contact } from "./components/common/Contact";
 import { Car } from "./components/car";
 import { CarDetail } from "./components/CarDetail";
 import {Main} from "./components/common/Main"
-import {Login} from "./components/Login"
 
 // import router
 import routes from './routes'
-// import todoApp from './reducers/reducers'
-//Configure middleware w/ redux-promise for AJAX requests
-// const configureStore =  require('./stores/configureStore')
 
-// const store = configureStore();
+//Configure middleware w/ redux-promise for AJAX requests
+ const configureStore =  require('./stores/configureStore')
+
+const store = configureStore();
 
 // let store = createStore(todoApp)
 // Static data
@@ -74,7 +73,7 @@ import routes from './routes'
             }
         ];
 
-ReactDOM.render((
+/*ReactDOM.render((
     <Router history = {browserHistory}>
         <Route path = "/" component = {Main}>
             <IndexRoute component = {Home} />
@@ -83,14 +82,14 @@ ReactDOM.render((
             <Route path = "/contact" component = {Contact} />
             <Route path = "/cars" component = { Car}  />
             <Route path = "/cars/:id" component={CarDetail} />
-            <Route path = "/login" component={Login} />
             
         </Route>
     </Router>	
-), document.getElementById('app'))
+), document.getElementById('app'))*/
 
-/*ReactDOM.render(
-  <Provider store={store}>
+ReactDOM.render(
+  <Provider >
     <Router history={browserHistory} routes={routes} />
+    <Main/>
   </Provider>
-  , document.getElementById('body'));*/
+  , document.getElementById('app'));

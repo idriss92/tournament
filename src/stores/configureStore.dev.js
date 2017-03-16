@@ -1,6 +1,6 @@
 import { createStore, applyMiddleware, compose } from 'redux';
 import * as promise from 'redux-promise';
-import reducer from '../reducers/tournament.reducer';
+import rootReducer from '../reducers/index.ts';
 
 let webpack = require('webpack');
 
@@ -10,7 +10,7 @@ export default function configureStore(initialState) {
     window.devToolsExtension ? window.devToolsExtension() : f => f
   )(createStore);
 
-  const store = finalCreateStore(reducer, initialState);
+  const store = finalCreateStore(rootReducer, initialState);
 
   if (module.hot) {
     // Enable Webpack hot module replacement for reducers
