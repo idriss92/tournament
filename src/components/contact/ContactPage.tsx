@@ -1,7 +1,6 @@
 import * as React from 'react';
 
-export interface IContactProps{name:string;}
-export class Contact extends React.Component<any,any> {
+class ContactPage extends React.Component<any,any> {
    render() {
       return (
          <div>
@@ -10,3 +9,5 @@ export class Contact extends React.Component<any,any> {
       )
    }
 }
+
+export default ContactPage;

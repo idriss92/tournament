@@ -1,25 +1,24 @@
 import * as React from "react";
 import * as ReactDOM from "react-dom"
-import { createStore, applyMiddleware } from 'redux'
+import { createStore, applyMiddleware, Store } from 'redux'
 import { Provider } from 'react-redux'
 import {Router, Route, Link, browserHistory, IndexRoute } from 'react-router';
 import tournamentReducers from './reducers/tournament.reducer'
+import  AboutPage  from "./components/about/AboutPage";
+import HomePage from "./components/home/HomePage";
+import ContactPage  from "./components/contact/ContactPage";
 
-import { About } from "./components/common/About";
-import { Home } from "./components/common/Home";
-import { Contact } from "./components/common/Contact";
 // import { App } from "./components/app";
-import { Car } from "./components/car";
-import { CarDetail } from "./components/CarDetail";
-import {Main} from "./components/common/Main"
+// import { Car } from "./components/car";
+// import { CarDetail } from "./components/CarDetail";
+
+import rootReducer from './reducers/index'
 
 // import router
 import routes from './routes'
 
-//Configure middleware w/ redux-promise for AJAX requests
- const configureStore =  require('./stores/configureStore')
-
-const store = configureStore();
+const initialState = {};
+const store: Store<any> = createStore(rootReducer, initialState);
 
 // let store = createStore(todoApp)
 // Static data
@@ -88,8 +87,7 @@ const store = configureStore();
 ), document.getElementById('app'))*/
 
 ReactDOM.render(
-  <Provider >
-    <Router history={browserHistory} routes={routes} />
-    <Main/>
-  </Provider>
+    <Provider store={store}>
+        <Router history={browserHistory} routes={routes} />
+    </Provider>
   , document.getElementById('app'));
