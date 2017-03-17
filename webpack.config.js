@@ -9,7 +9,7 @@ let config = {
   entry: [
     "webpack-dev-server/client?http://localhost:8080",
     "webpack/hot/only-dev-server",
-    "./src/index.tsx"
+    "./src/main/index.tsx"
     ],
   /*
    * The combination of path and filename tells Webpack what name to give to

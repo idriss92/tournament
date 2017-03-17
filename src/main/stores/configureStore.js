@@ -1,6 +1,6 @@
 import {createStore, applyMiddleware} from 'redux';
-import rootReducer from '../reducers'
-import reduxImmutableStateInvariant from 'redux-immutable-state-invariant'
+const rootReducer = require('../reducers');
+import reduxImmutableStateInvariant from 'redux-immutable-state-invariant';
 
 if (process.env.NODE_ENV === 'production' || (location && location.hostname !== 'localhost')) {
   module.exports = require('./configureStore.prod');
