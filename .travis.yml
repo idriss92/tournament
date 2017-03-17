@@ -17,9 +17,9 @@ addons:
     github_token:
       secure: NPoQ9iCeQS4voq3srTFwfw2JdO72nwzgT8UNrSJPhHW/542Hi9NthEqnbu9oAcBHn6DC73KWoqZR840Bu9YwptcB722Vh+wZuNtKHkTq4Zi2MlUy9UFeStfiYhQn354eXVtDyZcns8WZV4eouzMz3cLES+fXdzml1dCdJr6htQAKdj6892/QE4QnOILv/bpH5993J9NZ+r78E21udir0NqPuaCyREm3UTjBL/3+fIKc3o3pjBg5SCwfKPFqiIrgLCYmhdY4BO3GazGSDL2xE7/qK2tN1kqYhjWiHrAiR8Vv06bgNEOmhbeRAuxA2HTEXjx5wTdOIB9+w4UNBexMrjEv/Lyp75DnDmsMRICRAQPvDe+5Jb/eF976bJaAP58hEbke8gtd7BTVr6j3nPG/U9Wpl908/GBb3DpyGBJZzjih13yV2VmBN5aIh4Tteh5em2HBE1I7NXke7JtJFrmBSvMIh0uukfouUvIgv58mECn4kp0rnFfJqJ1G8Nbmm4R+NclVVjW3O3P7ecJQUk/vmMzW09fYFk+d0tqvS/iGgYOQx7cb7ZKx23jaDl8vQZ3i2Weysc/0IxbnAk1yqJ8OkZRpB3QNyOjFWajMMy7n8YDU5rY/cyvF65lgShoZlNSfO4ZbvLlUqaC341Ovq9VPMAqGRzg45y8BNzm6/OqKgGPw=
   branches:
-    - master
+  - master
 script:
-  - mvn clean install sonar:sonar -Dsonar.host.url=https://sonarqube.com -Dsonar.login=$SONAR_TOKEN
+  - sonar-scanner -X -Dsonar.host.url=https://sonarqube.com -Dsonar.login=$sonartravis
 jdk:
 - oraclejdk8
 cache:
