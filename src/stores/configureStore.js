@@ -1,19 +1,3 @@
-// import {createStore, applyMiddleware} from 'redux';
-// const rootReducer = require('../reducers');
-// import reduxImmutableStateInvariant from 'redux-immutable-state-invariant';
-
-// if (process.env.NODE_ENV === 'production' || (location && location.hostname !== 'localhost')) {
-//   module.exports = require('./configureStore.prod');
-// } else {
-//   module.exports = require('./configureStore.dev');
-// }
-
-// if (process.env.NODE_ENV === 'production') {
-//   module.exports = require('./configureStore.prod');
-// } else {
-//   module.exports = require('./configureStore.dev');
-// }
-
 import { createStore, applyMiddleware, compose } from 'redux';
 import { routerMiddleware } from 'react-router-redux';
 import thunk from 'redux-thunk';
@@ -53,14 +37,3 @@ export default function configureStore(initialState, history) {
 
   return store;
 }
-
-// export default function configureStore(initialState){
-//   return createStore(
-//     rootReducer,
-//     initialState
-//     // ,
-//     // window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
-//     // ,
-//     // applyMiddleware(reduxImmutableStateInvariant())
-//   )
-// }

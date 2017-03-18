@@ -1,8 +1,10 @@
 import { combineReducers } from 'redux';
+import {routeReducer as routing} from 'react-router-redux'
 import courses from './courseReducer'
 
 const rootReducer = combineReducers({
-  courses
+  courses,
+  routing
 });
 // import TournamentReducer from './tournament.reducer';
 // //import UserReducer from './reducer_user';
