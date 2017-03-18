@@ -3,7 +3,7 @@ import * as ReactDOM from "react-dom"
 import { createStore, applyMiddleware, Store } from 'redux'
 import { Provider } from 'react-redux'
 import {Router, Route, Link, browserHistory, IndexRoute } from 'react-router';
-import tournamentReducers from './reducers/tournament.reducer'
+import tournamentReducers from './reducers/tournamentReducer'
 import  AboutPage  from "./components/about/AboutPage";
 import HomePage from "./components/home/HomePage";
 import ContactPage  from "./components/contact/ContactPage";
