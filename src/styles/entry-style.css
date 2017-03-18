@@ -1,0 +1,23 @@
+@import url('/node_modules/bootstrap/dist/css/bootstrap.css');
+
+.entry-block{
+    font-size: 2em;
+    color: #333;
+}
+
+/* Styles */
+#app{
+    font:  14px 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    color: #4d4d4d;
+    min-width: 550 px;
+    max-width: 850 px;
+    margin: 0 auto;
+}
+
+a.active{
+    color: orange;
+}
+
+nav{
+    padding-top: 20px;
+}

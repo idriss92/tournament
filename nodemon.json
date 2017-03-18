@@ -1,0 +1,10 @@
+{
+    "verbose": false,
+    "watch": [
+      "src/utils",
+      "src/routes.jsx",
+      "server",
+      "webpack"
+    ],
+    "exec": "yarn run build:dev && node compiled/server.dev.js"
+}

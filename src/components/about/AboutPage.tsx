@@ -1,7 +1,5 @@
 import * as React from 'react';
 
-export interface IAboutProps{name:string;}
-
 class AboutPage extends React.Component<any,any>{
    render() {
       return (

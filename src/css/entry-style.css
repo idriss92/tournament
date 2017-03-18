@@ -1,3 +1,5 @@
+@import url('/node_modules/bootstrap/dist/css/bootstrap.css');
+
 .entry-block{
     font-size: 2em;
     color: #333;

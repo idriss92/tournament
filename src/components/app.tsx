@@ -8,11 +8,6 @@ class App extends React.Component<any,any>{
         return(
          <div className="container-fluid">
              <Header />
-            {/*<ul>
-               <li><Link to="/home" activeStyle={this.ACTIVE}>Home</Link></li>
-               <li><Link to="/about" activeStyle={this.ACTIVE}>About</Link></li>
-               <li><Link to="/contact" activeStyle={this.ACTIVE}>Contact</Link></li>
-            </ul>				*/}
            {this.props.children}
          </div>
         )
