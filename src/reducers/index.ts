@@ -1,9 +1,27 @@
 import { combineReducers } from 'redux';
-import {routeReducer as routing} from 'react-router-redux'
-import courses from './courseReducer'
+import {routeReducer as routing} from 'react-router-redux';
+import user from './userReducer';
+import courses from './courseReducer';
+import tournament from './tournamentReducer';
+import * as types from '../actions/actionsTypes'
+
+const isFetching = (state = false, action) => {
+  switch (action.type) {
+    case types.CREATE_REQUEST:
+      return true;
+    case types.REQUEST_SUCCESS:
+    case types.REQUEST_FAILURE:
+      return false;
+    default:
+      return state;
+  }
+};
 
 const rootReducer = combineReducers({
+  isFetching,
   courses,
+  tournament,
+  user,
   routing
 });
 // import TournamentReducer from './tournament.reducer';

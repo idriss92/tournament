@@ -31,7 +31,7 @@ const metaAssets = () => {
     // Add to homescreen for Safari on IOS
     { name: 'apple-mobile-web-app-capable', content: 'yes' },
     { name: 'apple-mobile-web-app-status-bar-style', content: 'black' },
-    { name: 'apple-mobile-web-app-title', content: 'reactGo' },
+    { name: 'apple-mobile-web-app-title', content: 'Tournament' },
     // Tile icon for Win8 (144x144 + tile color)
     { name: 'msapplication-TileImage', content: msFavicon },
     { name: 'msapplication-TileColor', content: '#3372DF' }
@@ -54,6 +54,6 @@ const linkAssets = () => {
   return isProduction ? links : links.filter(l => l.rel !== 'stylesheet');
 };
 
-export const title = 'reactGo - just ship it';
+export const title = 'Tournament - just create it';
 export const meta = metaAssets();
 export const link = linkAssets();
