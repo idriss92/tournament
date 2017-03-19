@@ -1,0 +1,19 @@
+environment:
+  matrix:
+  - nodejs_version: 6
+  - nodejs_version: 7
+
+install:
+  - ps: Install-Product node $env:nodejs_version
+  - npm -g install yarn && set PATH=%APPDATA%\yarn;%PATH%
+  - yarn install
+
+test_script:
+  - node --version
+  - yarn --version
+  - npm run depcheck
+  - npm run depcheck-json
+  - yarn run lint
+  - yarn run test
+
+build: off

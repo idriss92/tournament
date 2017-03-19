@@ -3,8 +3,14 @@
   "version": "0.0.0",
   "description": "",
   "main": "index.js",
+  "bin": {
+    "depcheck": "bin/depcheck"
+  },
   "scripts": {
     "audit": "lighthouse http://localhost:8080",
+    "depcheck": "node ./bin/depcheck",
+    "depcheck-web": "node ./bin/depcheck --json | depcheck-web",
+    "depcheck-json": "node ./bin/depcheck --json | babel-node ./build/check-json",
     "dev": "cross-env NODE_ENV=development nodemon",
     "build:dev": "cross-env NODE_ENV=development webpack --debug --colors --display-error-details --config ./webpack/webpack.config.js",
     "build": "yarn run clean && cross-env NODE_ENV=production webpack --colors --display-error-details --config ./webpack/webpack.config.js",
@@ -18,9 +24,14 @@
     "lint:watch": "yarn run lint -- --watch",
     "test": "mocha --reporter progress tools/testSetup.js \"src/**/*.test.tsx\"",
     "test:watch": "yarn run test",
+    "test-dependent": "node-version-gte-4 && dependent-build || node-version-lt-4",
+    "test-coverage": "babel-node node_modules/cross-env/bin/cross-env.js NODE_ENV=test nyc mocha ./test ./test/special --timeout 20000 && nyc report --reporter=text-lcov > ./coverage/coverage.lcov",
     "watch": "webpack -d --watch"
   },
-  "author": "",
+  "author": {
+    "name": "Idriss SANI",
+    "email": "idriss_sani@yahoo.fr"
+  },
   "license": "ISC",
   "devDependencies": {
     "awesome-typescript-loader": "^3.1.2",
@@ -28,6 +39,10 @@
     "babel-core": "6.4.5",
     "babel-loader": "6.2.5",
     "babel-preset-react": "^6.23.0",
+    "codecov.io": "^0.1.6",
+    "depcheck": "^0.6.7",
+    "depcheck-web": "^0.1.0",
+    "dependent-build": "^0.1.6",
     "eslint": "^3.17.1",
     "eslint-plugin-import": "^2.2.0",
     "eslint-plugin-react": "^6.10.0",
