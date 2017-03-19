@@ -3,3 +3,4 @@
 /typings
 /compiled
 /public
+*.log

@@ -6,13 +6,12 @@ environment:
 install:
   - ps: Install-Product node $env:nodejs_version
   - npm -g install yarn && set PATH=%APPDATA%\yarn;%PATH%
+  - npm -g install istanbul && set PATH=%APPDATA%\istanbul;%PATH%
   - yarn install
 
 test_script:
   - node --version
   - yarn --version
-  - npm run depcheck
-  - npm run depcheck-json
   - yarn run lint
   - yarn run test
 
