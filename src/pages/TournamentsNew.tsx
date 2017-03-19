@@ -1,4 +1,4 @@
-import HeaderContainer from '../containers/tournament/HeaderContainer';
+/*import HeaderContainer from '../containers/tournament/HeaderContainer';
 import TournamentFormContainer from '../containers/tournament/TournamentFormContainer';
 import * as React from 'react';
 
@@ -12,4 +12,4 @@ export class TournamentsNew extends React.Component<any,any> {
     );
   }
 }
-
+*/

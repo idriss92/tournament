@@ -46,7 +46,9 @@
     "node": ">=6.x"
   },
   "dependencies": {
+    "autoprefixer": "^6.4.0",
     "axios": "^0.15.3",
+    "babel-eslint": "^6.1.2",
     "babel-plugin-react-transform": "^2.0.2",
     "babel-plugin-transform-react-constant-elements": "^6.5.0",
     "babel-plugin-transform-react-inline-elements": "^6.6.5",

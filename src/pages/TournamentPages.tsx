@@ -1,4 +1,4 @@
-import * as React from 'react';
+/*import * as React from 'react';
 
 class TournamentsPage extends React.Component<any,any>{
     render(){
@@ -10,4 +10,4 @@ class TournamentsPage extends React.Component<any,any>{
     }
 }
 
-export default TournamentsPage;
+export default TournamentsPage;*/

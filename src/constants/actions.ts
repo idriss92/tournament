@@ -59,4 +59,4 @@ export const UPDATE_USER_EMAIL = 'UPDATE_USER_EMAIL';
 //log out user
 export const LOGOUT_USER = 'LOGOUT_USER';
 
-export const ROOT_URL = location.href.indexOf('localhost') > 0 ? 'http://localhost:3000/api' : '/api';
+// export const ROOT_URL = location.href.indexOf('localhost') > 0 ? 'http://localhost:3000/api' : '/api';

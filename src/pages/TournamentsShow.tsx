@@ -1,7 +1,7 @@
-import * as React from 'react';
+/*import * as React from 'react';
 import { connect } from 'react-redux';
 import { deleteTournament } from '../actions/actionTournament'
-import Header from '../containers/tournament/HeaderContainer';
+// import Header from '../containers/tournament/HeaderContainer';
 import TournamentDetailsContainer from '../containers/tournament/TournamentDetailsContainer';
 
 export class TournamentsShow extends React.Component<any,{any}> {
@@ -22,4 +22,4 @@ export class TournamentsShow extends React.Component<any,{any}> {
       </div>
     );
   }
-}
+}*/

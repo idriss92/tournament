@@ -42,7 +42,7 @@ class CoursePage extends React.Component<any, any> {
         actions: React.PropTypes.object.isRequired,
         // dispatch: React.PropTypes.func.isRequired,
         // courses: React.PropTypes.array.isRequired,
-        createCourse: React.PropTypes.func.isRequired
+        // createCourse: React.PropTypes.func.isRequired
     };
 }
 

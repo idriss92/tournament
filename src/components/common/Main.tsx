@@ -1,4 +1,4 @@
-import * as React from 'react';
+/*import * as React from 'react';
 import { Link } from 'react-router'
 import * as mui from 'material-ui'
 import Header from './Header'
@@ -14,4 +14,4 @@ export class Main extends React.Component<any,any>{
             </div>
         );
     }
-}
+}*/
