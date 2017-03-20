@@ -12,7 +12,6 @@ install:
 test_script:
   - node --version
   - yarn --version
-  - yarn run lint
-  - yarn run test
+  # - yarn run test
 
 build: off
