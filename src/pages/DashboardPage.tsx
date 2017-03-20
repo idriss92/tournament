@@ -12,12 +12,12 @@ class DashboardPage extends React.Component<any,any> {
   }
 
   pageTitle() {
-    return 'Dashboard | reactGo';
+    return 'Dashboard | Tournament';
   }
 
   pageMeta() {
     return [
-      { name: 'description', content: 'A reactGo example of a dashboard page' }
+      { name: 'description', content: 'Tournament example of a dashboard page' }
     ];
   }
 

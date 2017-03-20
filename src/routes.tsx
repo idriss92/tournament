@@ -1,18 +1,12 @@
 import * as React from 'react';
 import { Route, IndexRoute } from 'react-router';
 
-import AppPage from './pages/AppPage';
-// import AboutPage from './components/about/AboutPage';
-import DashboardPage from './pages/DashboardPage';
-import AboutPage from './pages/AboutPage'
 import HomePage from './components/home/HomePage';
 import ContactPage from './components/contact/ContactPage';
 import CoursePage from './pages/CoursePage';
 import TournamentPage from './pages/TournamentPage'
-import LoginOrRegisterPage from './pages/LoginOrRegisterPage'
-
+import {AboutPage, AppPage, DashboardPage, LoginOrRegisterPage} from './pages'
 // import { fetchVoteData } from './fetch-data';
-// import { App, Vote, Dashboard, About, LoginOrRegister } from './pages';
 
 /*
  * @param {Redux Store}

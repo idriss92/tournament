@@ -12,7 +12,7 @@ class AboutPage extends React.Component<any,any> {
   }
 
   pageTitle() {
-    return 'About | reactGo';
+    return 'About | Tournament';
   }
 
   pageMeta() {
