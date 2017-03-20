@@ -1,6 +1,6 @@
 import * as React from 'react';
-import { connect } from 'react-redux'
-const courseActions =  require('../../actions/actionCourse');
+import { connect } from 'react-redux';
+const courseActions = require('../actions/actionCourse');
 import {bindActionCreators} from 'redux'
 
 class CoursePage extends React.Component<any, any> {

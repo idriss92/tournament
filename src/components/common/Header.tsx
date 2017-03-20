@@ -15,6 +15,7 @@ export default class Header extends React.Component<any,any>{
                 <li><Link to="/about" activeClassName="active">About</Link></li>
                 <li><Link to="/contact" activeClassName="active">Contact</Link></li>
                 <li><Link to="/courses" activeClassName="active">Courses</Link></li>
+                <li><Link to="/tournaments" activeClassName="active">Tournaments</Link></li>
                                 </ul>
                             </div>
                         </div>

@@ -5,7 +5,8 @@ import App from './components/App';
 import AboutPage from './components/about/AboutPage';
 import HomePage from './components/home/HomePage';
 import ContactPage from './components/contact/ContactPage';
-import CoursePage from './components/course/CoursePage';
+import CoursePage from './pages/CoursePage';
+import TournamentPage from './pages/TournamentPage'
 
 // import { fetchVoteData } from './fetch-data';
 // import { App, Vote, Dashboard, About, LoginOrRegister } from './pages';
@@ -42,6 +43,7 @@ export default (store) => {
       <Route path="about" component={AboutPage} />
       <Route path="contact" component={ContactPage} />
       <Route path="courses" component={CoursePage} />
+      <Route path="tournaments" component={TournamentPage} />
     </Route>
   );
 };

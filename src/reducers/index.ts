@@ -2,7 +2,7 @@ import { combineReducers } from 'redux';
 import {routerReducer } from 'react-router-redux';
 import user from './userReducer';
 import courses from './courseReducer';
-import tournament from './tournamentReducer';
+import tournament from './tournReducer';
 import * as types from '../actions/actionsTypes'
 
 const isFetching = (state = false, action) => {
