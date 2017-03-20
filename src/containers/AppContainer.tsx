@@ -9,7 +9,7 @@ const styles = require('../css/main');
 const cx = classNames.bind(styles);
 
 class AppContainer extends React.Component<any,any>{
-    ACTIVE : any  = {color: 'red'}
+    // ACTIVE : any  = {color: 'red'}
     render(){
         return(
          <div className={cx('app')}>
