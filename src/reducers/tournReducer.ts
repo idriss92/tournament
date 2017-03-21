@@ -1,16 +1,6 @@
 import * as types from './../actions/actionsTypes'
 import { combineReducers } from 'redux'
-// export default function tournamentReducer(state = [], action){
-//     switch(action.type){
-//         case types.CREATE_TOURNAMENT_REQUEST:
 
-//             return [...state,
-//              (<any>Object).assign({}, action.course)
-//             ];
-//         default:
-//             return state;
-//     }
-// }
 
 const tournament = function tournament(state = {}, action){
     switch(action.type){
