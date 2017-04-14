@@ -9,8 +9,7 @@ class Page extends React.Component<any,any>{
     static propTypes = {
         title: React.PropTypes.string,
         link: React.PropTypes.array,
-        meta: React.PropTypes.array,
-        // children: React.PropTypes.element
+        meta: React.PropTypes.array
     }
     render(){
         return(

@@ -3,6 +3,7 @@ import {routerReducer } from 'react-router-redux';
 import user from './userReducer';
 import courses from './courseReducer';
 import tournament from './tournReducer';
+import message from './messageReducer';
 import * as types from '../actions/actionsTypes'
 
 const isFetching = (state = false, action) => {
@@ -22,22 +23,8 @@ const rootReducer = combineReducers({
   courses,
   tournament,
   user,
+  message,
   routing : routerReducer
 });
-// import TournamentReducer from './tournament.reducer';
-// //import UserReducer from './reducer_user';
-// import ValidateUserFieldsReducer from './validate.reducer';
-// //import ResendEmailReducer from './reducer_resendEmail';
-// //import UpdateEmailReducer from './reducer_updateEmail';
-// import { reducer as formReducer } from 'redux-form';
-
-// const rootReducer = combineReducers({
-// //  user: UserReducer,
-//   validateFields: ValidateUserFieldsReducer,
-//   tournaments: TournamentReducer, //<-- Posts
-//   form: formReducer, // <-- redux-form
-// //  resendEmail: ResendEmailReducer,
-// //  updateEmail: UpdateEmailReducer
-// });
 
 export default rootReducer;

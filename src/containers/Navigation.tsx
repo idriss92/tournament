@@ -3,7 +3,7 @@ import { Link } from 'react-router';
 import { connect } from 'react-redux';
 import * as classNames from 'classnames/bind';
 import { logOut } from '../actions/actionUsers';
-const styles = ('../css/components/navigation');
+const styles = require('../css/components/navigation');
 const cx = classNames.bind(styles)
 
 class Navigation extends React.Component<any,any>{
@@ -13,7 +13,7 @@ class Navigation extends React.Component<any,any>{
     render(){
         return(
             <nav className={cx('navigation')} role="navigation">
-                <Link to="/" className={cx('item', 'logo')} activeClassName={cx('active')}>Tournaments</Link>
+                <Link to="/" className={cx('item', 'logo')} activeClassName={cx('active')}>TournamentApp</Link>
                 { this.props.user.authenticated ? (
                     <Link
                     onClick={this.props.logOut}
@@ -23,6 +23,7 @@ class Navigation extends React.Component<any,any>{
                 )}
                 <Link className={cx('item')} to="/dashboard">Dashboard</Link>
                 <Link to="/about" className={cx('item')} activeClassName={cx('active')}>About</Link>
+                <Link to="/tournaments" className={cx('item')} activeClassName={cx('active')}>Tournaments</Link>
         {/*<Link to="/contact" className={cx('item')} activeClassName={cx('active')}>Contact</Link>
         <Link to="/courses" className={cx('item')} activeClassName={cx('active')}>Courses</Link>
         <Link to="/tournaments" className={cx('item')} activeClassName={cx('active')}>Tournaments</Link>*/}
@@ -32,7 +33,7 @@ class Navigation extends React.Component<any,any>{
 
     static propTypes = {
         user: React.PropTypes.object,
-        logout: React.PropTypes.func.isRequired
+        logOut: React.PropTypes.func.isRequired
     }
 }
 

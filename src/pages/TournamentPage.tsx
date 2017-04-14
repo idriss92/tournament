@@ -1,24 +1,37 @@
 import * as React from 'react';
-import { connect } from 'react-redux'
-const tournamentActions = require('../actions/actionTourn');
+import Page from './Page';
+import TournamentContainer from '../containers/TournamentContainer'
+// import { connect } from 'react-redux'
+// const tournamentActions = require('../actions/actionTourn');
 
 class TournamentsPage extends React.Component<any,any>{
+    getMetaData(){
+        return{
+            title: this.pageTitle(),
+            meta: this.pageMeta(),
+            link: this.pageLink()
+        };
+    }
 
-    constructor(props, context){
-        super(props, context);
+    pageTitle(){
+        return 'Tournament | Tournament';
+    }
 
-        this.state
+    pageMeta(){
+        return[
+            {name: 'description', content: 'A tournament example of a tournament'}
+        ]
+    }
+
+    pageLink(){
+        return [];
     }
 
     render() {
         return (
-            <div>
-                <h1>Tournaments</h1>
-                {/*{this.props.courses.map(this.courseRow)}
-                <h2>Add Course</h2>
-                <input type="text" onChange={this.onTitleChange} value={this.state.course.title} />
-                <input type="submit" onClick={this.onClickSave} value="Save" />*/}
-            </div>
+            <Page{...this.getMetaData()}>
+                <TournamentContainer {...this.props} />
+            </Page>
         )
     }
 }

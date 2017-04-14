@@ -14,7 +14,8 @@ export function destroy(id){
     return { type: types.DESTROY_TOURNAMENT, id}
 }
 
-export function typing(text){
+export function imtyping(text){
+    console.log('tournament '+ text);
     return {
         type: types.TYPING,
         newTournament: text

@@ -1,9 +1,14 @@
 import * as types from './../actions/actionsTypes'
-import { combineReducers } from 'redux'
+import {
+    combineReducers
+} from 'redux'
 
 
-const tournament = function tournament(state = {}, action){
-    switch(action.type){
+const tournament = (
+    state = {},
+    action
+) => {
+    switch (action.type) {
         case types.CREATE_TOURNAMENT_REQUEST:
             return {
                 id: action.id,
@@ -14,12 +19,18 @@ const tournament = function tournament(state = {}, action){
     }
 };
 
-const tournaments = function tournaments(state = [], action){
-    switch(action.type){
+const tournaments = (
+    state = [],
+    action
+) => {
+    switch (action.type) {
         case types.REQUEST_SUCCESS:
-            if(action.data) return action.data;
+            if (action.data) return action.data;
             return state;
         case types.CREATE_TOURNAMENT_REQUEST:
+            // return [...state,
+            //  (<any>Object).assign({}, action.course)
+            // ]
             return [...state, tournament(undefined, action)];
         case types.CREATE_TOURNAMENT_FAILURE:
             return state.filter(t => t.id !== action.id);
@@ -30,9 +41,13 @@ const tournaments = function tournaments(state = [], action){
     }
 };
 
-const newTournament = function newTournament(state = '', action){
-    switch(action.type){
+const newTournament = (
+    state = '',
+    action
+) => {
+    switch (action.type) {
         case types.TYPING:
+            //console.log(action);
             return action.newTournament;
         case types.CREATE_TOURNAMENT_REQUEST:
             return '';

@@ -92,7 +92,7 @@ class LoginOrRegister extends React.Component<any,any> {
               />
               <div className={cx('hint')}>
                 <div>Hint</div>
-                <div>email: example@ninja.com password: ninja</div>
+                <div>email: example@example.com password: example</div>
               </div>
               <p
                 className={cx('message', {
@@ -105,7 +105,7 @@ class LoginOrRegister extends React.Component<any,any> {
             </form>
           </div>
           <div className={cx('google-container')}>
-            <h1 className={cx('heading')}>Google Login Demo</h1>
+            <h1 className={cx('heading')}>Google Login</h1>
             <a
               className={cx('button')}
               href="/auth/google">Login with Google</a>
