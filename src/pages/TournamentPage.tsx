@@ -1,9 +1,6 @@
 import * as React from 'react';
 import Page from './Page';
 import TournamentContainer from '../containers/TournamentContainer'
-// import { connect } from 'react-redux'
-// const tournamentActions = require('../actions/actionTourn');
-
 class TournamentsPage extends React.Component<any,any>{
     getMetaData(){
         return{

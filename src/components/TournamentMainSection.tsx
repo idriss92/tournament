@@ -35,4 +35,3 @@ export class TournamentMainSection extends React.Component<any, any>{
         onDestroy: React.PropTypes.func.isRequired
     }
 }
-//export default TournamentMainSection

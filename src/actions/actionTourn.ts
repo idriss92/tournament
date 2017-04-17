@@ -14,13 +14,13 @@ export function destroy(id){
     return { type: types.DESTROY_TOURNAMENT, id}
 }
 
-export function imtyping(text){
-    console.log('tournament '+ text);
-    return {
-        type: types.TYPING,
-        newTournament: text
-    };
-}
+// export function imtyping(text){
+//     console.log('tournament '+ text);
+//     return {
+//         type: types.TYPING,
+//         newTournament: text
+//     };
+// }
 
 export function createTournamentRequest(data){
     return{
@@ -44,6 +44,12 @@ export function createTournamentFailure(data){
         error: data.error
     };
 }
+
+export function handleClearForm(){}
+export function handleFormSubmit(){}
+export function handleDescriptionChange(){
+}
+export function handlePlayersRange(){}
 
 export function createTournamentDuplicate(){
     return {

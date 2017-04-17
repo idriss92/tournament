@@ -1,5 +1,6 @@
 @import '../common/typography';
 @import '../common/input';
+@import '../common/label';
 
 .entrybox {
   width: 100%;
@@ -16,5 +17,9 @@
   @apply --input;
   text-align: center;
   outline: none;
+}
+
+.label {
+  text-align: center;
 }
 
